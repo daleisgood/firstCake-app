@@ -49,6 +49,10 @@ return function (RouteBuilder $routes): void {
      */
     $routes->setRouteClass(DashedRoute::class);
 
+    // Add these lines here if you need them
+    $routes->setExtensions(['json', 'xml']);
+    $routes->resources('Tasks');
+
     $routes->scope('/', function (RouteBuilder $builder): void {
         /*
          * Here, we are connecting '/' (base path) to a controller called 'Pages',
